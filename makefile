@@ -42,56 +42,56 @@ help: ../readme.txt
 
 imagsph: diffint cfg mem
 	$(CC) $(CFLAGS) $(OMPFLAGS) -c src/imagsph/imagsph.c -o imagsph.o
-	$(CC) $(CFLAGS) $(OMPFLAGS) -o imagsph diffint.o cfg.o mem.o imagsph.o $(CLIBS) $(OMPLIBS)
+	$(CC) $(CFLAGS) $(OMPFLAGS) -o imagsph.out diffint.o cfg.o mem.o imagsph.o $(CLIBS) $(OMPLIBS)
 
 imagcir: diffint cfg mem
 	$(CC) $(CFLAGS) $(OMPFLAGS) -c src/imagcir/imagcir.c -o imagcir.o
-	$(CC) $(CFLAGS) $(OMPFLAGS) -o imagcir diffint.o cfg.o mem.o imagcir.o $(CLIBS) $(OMPLIBS)
+	$(CC) $(CFLAGS) $(OMPFLAGS) -o imagcir.out diffint.o cfg.o mem.o imagcir.o $(CLIBS) $(OMPLIBS)
 
 imag1d: diffint cfg mem
 	$(CC) $(CFLAGS) $(OMPFLAGS) -c src/imag1d/imag1d.c -o imag1d.o
-	$(CC) $(CFLAGS) $(OMPFLAGS) -o imag1d diffint.o cfg.o mem.o imag1d.o $(CLIBS) $(OMPLIBS)
+	$(CC) $(CFLAGS) $(OMPFLAGS) -o imag1d.out diffint.o cfg.o mem.o imag1d.o $(CLIBS) $(OMPLIBS)
 
 imag2d: diffint cfg mem
 	$(CC) $(CFLAGS) $(OMPFLAGS) -c src/imag2d/imag2d.c -o imag2d.o
-	$(CC) $(CFLAGS) $(OMPFLAGS) -o imag2d diffint.o cfg.o mem.o imag2d.o $(CLIBS) $(OMPLIBS)
+	$(CC) $(CFLAGS) $(OMPFLAGS) -o imag2d.out diffint.o cfg.o mem.o imag2d.o $(CLIBS) $(OMPLIBS)
 
 imagaxi: diffint cfg mem
 	$(CC) $(CFLAGS) $(OMPFLAGS) -c src/imagaxi/imagaxi.c -o imagaxi.o
-	$(CC) $(CFLAGS) $(OMPFLAGS) -o imagaxi diffint.o cfg.o mem.o imagaxi.o $(CLIBS) $(OMPLIBS)
+	$(CC) $(CFLAGS) $(OMPFLAGS) -o imagaxi.out diffint.o cfg.o mem.o imagaxi.o $(CLIBS) $(OMPLIBS)
 
 imag3d: diffint cfg mem
 	$(CC) $(CFLAGS) $(OMPFLAGS) -c src/imag3d/imag3d.c -o imag3d.o
-	$(CC) $(CFLAGS) $(OMPFLAGS) -o imag3d diffint.o cfg.o mem.o imag3d.o $(CLIBS) $(OMPLIBS)
+	$(CC) $(CFLAGS) $(OMPFLAGS) -o imag3d.out diffint.o cfg.o mem.o imag3d.o $(CLIBS) $(OMPLIBS)
 
 realsph: diffint cfg mem
 	$(CC) $(CFLAGS) $(OMPFLAGS) -c src/realsph/realsph.c -o realsph.o
-	$(CC) $(CFLAGS) $(OMPFLAGS) -o realsph diffint.o cfg.o mem.o realsph.o $(CLIBS) $(OMPLIBS)
+	$(CC) $(CFLAGS) $(OMPFLAGS) -o realsph.out diffint.o cfg.o mem.o realsph.o $(CLIBS) $(OMPLIBS)
 	rm -rf *.o
 
 realcir: diffint cfg mem
 	$(CC) $(CFLAGS) $(OMPFLAGS) -c src/realcir/realcir.c -o realcir.o
-	$(CC) $(CFLAGS) $(OMPFLAGS) -o realcir diffint.o cfg.o mem.o realcir.o $(CLIBS) $(OMPLIBS)
+	$(CC) $(CFLAGS) $(OMPFLAGS) -o realcir.out diffint.o cfg.o mem.o realcir.o $(CLIBS) $(OMPLIBS)
 	rm -rf *.o
 
 real1d: diffint cfg mem
 	$(CC) $(CFLAGS) $(OMPFLAGS) -c src/real1d/real1d.c -o real1d.o
-	$(CC) $(CFLAGS) $(OMPFLAGS) -o real1d diffint.o cfg.o mem.o real1d.o $(CLIBS) $(OMPLIBS)
+	$(CC) $(CFLAGS) $(OMPFLAGS) -o real1d.out diffint.o cfg.o mem.o real1d.o $(CLIBS) $(OMPLIBS)
 	rm -rf *.o
 
 real2d: diffint cfg mem
 	$(CC) $(CFLAGS) $(OMPFLAGS) -c src/real2d/real2d.c -o real2d.o
-	$(CC) $(CFLAGS) $(OMPFLAGS) -o real2d diffint.o cfg.o mem.o real2d.o $(CLIBS) $(OMPLIBS)
+	$(CC) $(CFLAGS) $(OMPFLAGS) -o real2d.out diffint.o cfg.o mem.o real2d.o $(CLIBS) $(OMPLIBS)
 	rm -rf *.o
 
 realaxi: diffint cfg mem
 	$(CC) $(CFLAGS) $(OMPFLAGS) -c src/realaxi/realaxi.c -o realaxi.o
-	$(CC) $(CFLAGS) $(OMPFLAGS) -o realaxi diffint.o cfg.o mem.o realaxi.o $(CLIBS) $(OMPLIBS)
+	$(CC) $(CFLAGS) $(OMPFLAGS) -o realaxi.out diffint.o cfg.o mem.o realaxi.o $(CLIBS) $(OMPLIBS)
 	rm -rf *.o
 
 real3d: diffint cfg mem
 	$(CC) $(CFLAGS) $(OMPFLAGS) -c src/real3d/real3d.c -o real3d.o
-	$(CC) $(CFLAGS) $(OMPFLAGS) -o real3d diffint.o cfg.o mem.o real3d.o $(CLIBS) $(OMPLIBS)
+	$(CC) $(CFLAGS) $(OMPFLAGS) -o real3d.out diffint.o cfg.o mem.o real3d.o $(CLIBS) $(OMPLIBS)
 	rm -rf *.o
 
 diffint:
@@ -104,4 +104,4 @@ mem:
 	$(CC) $(CFLAGS) -c src/utils/mem.c -o mem.o
 
 clean:
-	rm -rf *~ *.o imag2d real2d
+	rm -rf *~ *.o *.out
