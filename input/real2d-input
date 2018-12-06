@@ -1,4 +1,4 @@
-#
+512#
 # BEC-GP-OMP codes are developed and (c)opyright-ed by:
 #
 # Luis E. Young-S., Sadhan K. Adhikari
@@ -70,27 +70,27 @@
 #  Number of discretization points in the x-direction.
 #  Required: yes
 #  Type: long
-   NX = 256
+   NX = 1024
 
 #  Number of discretization points in the y-direction.
 #  Required: yes
 #  Type: long
-   NY = 256
+   NY = 1024
 
 #  Spatial discretization step in the x-direction.
 #  Required: yes
 #  Type: double
-   DX = 0.125
+   DX = 0.0625
 
 #  Spatial discretization step in the y-direction.
 #  Required: yes
 #  Type: double
-   DY = 0.125
+   DY = 0.0625
 
 #  Time discretization step.
 #  Required: yes
 #  Type: double
-   DT = 0.001
+   DT = 0.0005
 
 #  Gamma coefficient of anisotropy of the trap (omega_x / omega).
 #  Required: yes
@@ -115,7 +115,7 @@
 #  Number of subsequent iterations with fixed nonlinearity G0.
 #  Required: yes
 #  Type: long
-   NPAS = 10000
+   NPAS = 50000
 
 #  Number of final iterations with fixed oscillating nonlinearity G.
 #  Required: yes
@@ -205,4 +205,4 @@
 #  Required if DYNAOUT is defined.
 #  Required: conditionally
 #  Type: long
-   OUTSTPT = 50
+   OUTSTPT = 100
